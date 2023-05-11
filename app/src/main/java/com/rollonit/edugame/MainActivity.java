@@ -1,5 +1,6 @@
 package com.rollonit.edugame;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -28,11 +29,20 @@ public class MainActivity extends AppCompatActivity {
 
 
         // set the click listeners for the buttons
-        //startButton.setOnClickListener(v -> startGame());
+        startButton.setOnClickListener(v -> startGame());
         //settingsButton.setOnClickListener(v -> openSettings());
         exitButton.setOnClickListener(v -> exitApp());
         helpButton.setOnClickListener(v -> openHelp());
         //highScoreButton.setOnClickListener(v -> openHighScore());
+    }
+
+    /**
+     * Starts the game when the user presses the start button from the main screen
+     */
+    private void startGame() {
+        // start the game activity
+        Intent intent = new Intent(this, GameActivity.class);
+        startActivity(intent);
     }
 
     /**
