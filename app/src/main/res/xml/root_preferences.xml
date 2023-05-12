@@ -4,14 +4,14 @@
     <PreferenceCategory app:title="General">
         <SwitchPreference
             android:defaultValue="true"
-
             app:key="countdown_enable"
             app:title="@string/countdown_enable_title" />
+
         <SwitchPreference
             android:defaultValue="true"
-
             app:key="sound_enable"
             app:title="@string/sound_enable_title" />
+
         <EditTextPreference
             android:defaultValue="5"
             android:digits="0123456789"
@@ -57,13 +57,4 @@
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
-
-    <PreferenceCategory app:title="@string/colors_header">
-
-        <SwitchPreferenceCompat
-            app:key="test"
-            app:title="test" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>
