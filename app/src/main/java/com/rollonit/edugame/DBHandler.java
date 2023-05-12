@@ -76,8 +76,6 @@ public class DBHandler extends SQLiteOpenHelper {
 
         // Insert the new high score into the table.
         db.execSQL("INSERT INTO high_scores (score, name) VALUES (" + score + ", '" + name + "');");
-
-        showErrorDialog("High score of " + score + " added to the database. It contained " + numHighScores + " entries.");
     }
 
 
