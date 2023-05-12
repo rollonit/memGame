@@ -39,4 +39,34 @@ public class CellState {
         activeCellX = x;
         activeCellY = y;
     }
+
+    /**
+     * Checks if the given coordinates are the coordinates of the active cell.
+     *
+     * @param x the x coordinate of the cell
+     * @param y the y coordinate of the cell
+     * @return true if the given coordinates are the coordinates of the active cell
+     */
+    public boolean isActiveCell(int x, int y) {
+        return activeCellX == x && activeCellY == y;
+    }
+
+    /**
+     * Checks the equality of the given state with this state.
+     *
+     * @param other the state to compare with
+     * @return true if the given state is equal to this state
+     */
+    public boolean equals(CellState other) {
+        if (other == null) return false;
+        return activeCellX == other.activeCellX && activeCellY == other.activeCellY;
+    }
+
+    public int getActiveCellX() {
+        return activeCellX;
+    }
+
+    public int getActiveCellY() {
+        return activeCellY;
+    }
 }

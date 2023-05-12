@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         // set the click listeners for the buttons
         startButton.setOnClickListener(v -> startGame());
-        //settingsButton.setOnClickListener(v -> openSettings());
+        settingsButton.setOnClickListener(v -> openSettings());
         exitButton.setOnClickListener(v -> exitApp());
         helpButton.setOnClickListener(v -> openHelp());
         //highScoreButton.setOnClickListener(v -> openHighScore());
@@ -42,6 +42,15 @@ public class MainActivity extends AppCompatActivity {
     private void startGame() {
         // start the game activity
         Intent intent = new Intent(this, GameActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Opens the settings screen when the user presses the settings button from the main screen
+     */
+    private void openSettings() {
+        // start the settings activity
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 

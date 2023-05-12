@@ -1,4 +1,19 @@
 <resources>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="timings_header">Timings</string>
+    <string name="colors_header">Colors</string>
+
+    <!-- Timings Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="show_interval_title">When showing (ms)</string>
+    <string name="turn_change_interval_title">After input (ms)</string>
+    <string name="countdown_enable_title">Countdown at start</string>
+    <string name="countdown_length_title">Countdown length (s)</string>
+    <string name="flash_duration_title">Flash duration (ms)</string>
+
+    <!-- Game strings -->
     <string name="app_name">MemGame</string>
     <string name="exit">EXIT</string>
     <string name="settings">SETTINGS</string>
@@ -6,24 +21,18 @@
     <string name="logo_desc">Logo of the app, which looks like three boxes</string>
     <string name="high_scores">HIGH SCORES</string>
     <string name="help">HELP</string>
-
-    <string name="title_activity_settings">SettingsActivity</string>
-
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
-
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
-
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="help_message">This is a really long and thoughtful message that is telling you how to play the game properly. Have fun!</string>
     <string name="ok">OK, UNDERSTOOD!</string>
     <string name="help_title">INSTRUCTIONS</string>
+    <string name="textview">Start</string>
+    <string name="back_to_menu">Go back to main menu</string>
+    <string name="go">GO!</string>
+    <string name="your_turn">Your turn!</string>
+    <string name="watch">Watch</string>
+    <string name="correct">Correct!</string>
+    <string name="wrong">Wrong! Try again?</string>
+    <string name="def_score">Score: 0</string>
+    <string name="score">Score: %1$d</string>
+    <string name="starting_score_title">Starting score</string>
+    <string name="sound_enable_title">Chime sound on flash</string>
 </resources>
