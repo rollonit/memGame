@@ -25,7 +25,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/main_menu_margins"
+        android:layout_marginBottom="50dp"
         android:fontFamily="serif-monospace"
         android:text="@string/app_name"
         android:textColor="?attr/colorOnSurfaceVariant"
@@ -39,13 +39,14 @@
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/main_menu_wide_button_width"
+        android:layout_height="@dimen/main_menu_button_height"
         android:layout_margin="@dimen/main_menu_margins"
         android:backgroundTint="?attr/colorPrimary"
         android:text="@string/start"
         android:textColor="?attr/colorOnPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/settingsButton"
+        android:textSize="@dimen/main_menu_button_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/hsButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,31 +54,66 @@
 
     <Button
         android:id="@+id/settingsButton"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/main_menu_wide_button_width"
+        android:layout_height="@dimen/main_menu_button_height"
         android:layout_margin="@dimen/main_menu_margins"
+
         android:backgroundTint="?attr/colorPrimary"
         android:text="@string/settings"
         android:textColor="?attr/colorOnPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/quitButton"
+        android:textSize="@dimen/main_menu_button_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/exitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hsButton" />
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="@dimen/main_menu_button_width"
+        android:layout_height="@dimen/main_menu_button_height"
+        android:layout_margin="@dimen/main_menu_margins"
+
+        android:backgroundTint="?attr/colorPrimary"
+        android:text="@string/exit"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="@dimen/main_menu_button_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsButton" />
+
+    <Button
+        android:id="@+id/hsButton"
+        android:layout_width="@dimen/main_menu_wide_button_width"
+        android:layout_height="@dimen/main_menu_button_height"
+        android:layout_margin="@dimen/main_menu_margins"
+        android:backgroundTint="?attr/colorPrimary"
+
+        android:text="@string/high_scores"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="@dimen/main_menu_button_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/settingsButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startButton" />
 
     <Button
-        android:id="@+id/quitButton"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/helpButton"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="@dimen/main_menu_button_width"
+        android:layout_height="@dimen/main_menu_button_height"
         android:layout_margin="@dimen/main_menu_margins"
-        android:backgroundTint="?attr/colorPrimary"
-        android:text="@string/exit"
-        android:textColor="?attr/colorOnPrimary"
+        android:layout_marginBottom="8dp"
+
+        android:text="@string/help"
+        android:textSize="@dimen/main_menu_button_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settingsButton" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
