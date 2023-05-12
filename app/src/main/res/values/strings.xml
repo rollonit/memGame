@@ -24,12 +24,9 @@
     <string name="logo_desc">Logo of the app, which looks like three boxes</string>
     <string name="high_scores">HIGH SCORES</string>
     <string name="help">HELP</string>
-    <string name="help_message">This is a simple memory game.\n
-        You will be shown a sequence of flashing cells on a grid.\n
-        You then have to repeat the sequence by clicking on the cells in the same order.\n
-        Every turn, the sequence gets longer by one.\n
-        Have fun!
-    </string>
+    <string name="help_message">This is a simple memory game.\nYou will be shown a sequence of
+        flashing cells on a grid.\nYou then have to repeat the sequence by clicking on the cells in
+        the same order.\nEvery turn, the sequence gets longer by one.\nHave fun!</string>
     <string name="ok">OK, UNDERSTOOD!</string>
     <string name="help_title">HOW TO PLAY</string>
     <string name="textview">Start</string>

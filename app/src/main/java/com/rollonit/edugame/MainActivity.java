@@ -1,12 +1,20 @@
 package com.rollonit.edugame;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.Button;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.color.MaterialColors;
+
+/**
+ * The main activity of the app. This is the first screen that the user sees when they open the app.
+ * It is responsive to screen landscape orientation.
+ */
 public class MainActivity extends AppCompatActivity {
     /**
      * Buttons on the main screen
@@ -19,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         // setup the activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // set the status bar colour to the same as the background
+        Window window = getWindow();
+        window.setStatusBarColor(MaterialColors.getColor(this, com.google.android.material.R.attr.colorSurface, Color.BLACK));
 
         // initialise the buttons
         startButton = findViewById(R.id.startButton);

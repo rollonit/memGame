@@ -9,4 +9,9 @@
 
     <!-- Game -->
     <dimen name="game_cell_margin">5dp</dimen>
+
+    <!-- Settings -->
+
+    <!-- High Scores -->
+    <dimen name="list_item_padding">20dp</dimen>
 </resources>

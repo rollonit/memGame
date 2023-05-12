@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -17,6 +18,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
+
+import com.google.android.material.color.MaterialColors;
 
 import java.util.ArrayList;
 
@@ -62,6 +65,10 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        // set the status bar colour to the same as the background
+        Window window = getWindow();
+        window.setStatusBarColor(MaterialColors.getColor(this, com.google.android.material.R.attr.colorSurface, Color.BLACK));
 
         // initialise the database handler
         dbHandler = new DBHandler(this);
