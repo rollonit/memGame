@@ -33,7 +33,16 @@ public class MainActivity extends AppCompatActivity {
         settingsButton.setOnClickListener(v -> openSettings());
         exitButton.setOnClickListener(v -> exitApp());
         helpButton.setOnClickListener(v -> openHelp());
-        //highScoreButton.setOnClickListener(v -> openHighScore());
+        highScoreButton.setOnClickListener(v -> openHighScore());
+    }
+
+    /**
+     * Opens the high score screen when the user presses the high score button from the main screen
+     */
+    private void openHighScore() {
+        // start the high score activity
+        Intent intent = new Intent(this, HighScoreActivity.class);
+        startActivity(intent);
     }
 
     /**

@@ -13,6 +13,9 @@
     <string name="countdown_length_title">Countdown length (s)</string>
     <string name="flash_duration_title">Flash duration (ms)</string>
 
+    <!-- Non-display strings -->
+    <string name="db_name">scores.db</string>
+
     <!-- Game strings -->
     <string name="app_name">MemGame</string>
     <string name="exit">EXIT</string>
@@ -35,4 +38,5 @@
     <string name="score">Score: %1$d</string>
     <string name="starting_score_title">Starting score</string>
     <string name="sound_enable_title">Chime sound on flash</string>
+    <string name="hs_screen_title">Top 3 scores</string>
 </resources>

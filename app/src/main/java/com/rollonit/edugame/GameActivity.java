@@ -10,9 +10,11 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
@@ -53,10 +55,16 @@ public class GameActivity extends AppCompatActivity {
     SoundPool sounds;
     int chimeSound;
 
+    // Handler for the database of scores
+    DBHandler dbHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        // initialise the database handler
+        dbHandler = new DBHandler(this);
 
         // get the user's preferences
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -219,6 +227,7 @@ public class GameActivity extends AppCompatActivity {
             running = false;
             startButton.setVisibility(Button.VISIBLE);
             statusText.setVisibility(TextView.GONE);
+            checkHandleHS(sequence.size() - 1);
         }
     }
 
@@ -241,5 +250,25 @@ public class GameActivity extends AppCompatActivity {
         if (SOUND_ENABLE) sounds.play(chimeSound, 1, 1, 1, 0, 1);
         cellViews[i][j].setColorFilter(color);
         cellViews[i][j].postDelayed(() -> cellViews[i][j].setColorFilter(Color.BLACK), FLASH_DURATION);
+    }
+
+    /**
+     * Check the SQLite database for the high score, and prompt the user with a dialog if they have beaten it.
+     */
+    private void checkHandleHS(int score) {
+        if (score > dbHandler.getHS()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+            builder.setTitle("New High Score!").setMessage("Congratulations! You have reached a new high score. Please enter a name to save it with.");
+
+            final EditText editText = new EditText(this);
+            builder.setView(editText).setPositiveButton("Save", (dialog, which) -> {
+                String name = editText.getText().toString();
+                dbHandler.addHS(score, name);
+            }).setNegativeButton("Cancel", null);
+
+            // Show the dialog.
+            builder.show();
+        }
     }
 }
